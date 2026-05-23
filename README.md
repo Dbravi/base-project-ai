@@ -1,82 +1,110 @@
-# Playwright TypeScript Automation Setup
+# AI Automation Setup
 
-A modern TypeScript Playwright project with ESLint (flat config), Prettier, and Playwright
-plugin support.
+Playwright test suite for E2E testing with TypeScript, ESLint, and Prettier.
 
-## Setup
+## Getting Started
 
-Install dependencies:
+### Prerequisites
+- Node.js 20+
+- npm
+
+### Installation
 
 ```bash
 npm install
 ```
 
-## Scripts
+### Running Tests
 
-- `npm test` - Run Playwright tests
-- `npm run test:ui` - Run tests with UI mode
-- `npm run test:headed` - Run tests in headed mode
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check formatting without modifying
-- `npm run type-check` - Run TypeScript compiler
+```bash
+# Headless mode
+npm test
+
+# UI mode
+npm run test:ui
+
+# Headed mode (browser visible)
+npm run test:headed
+```
+
+### Linting & Formatting
+
+```bash
+# Check TypeScript
+npm run type-check
+
+# Lint code
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+
+# Format code
+npm run format
+
+# Check formatting
+npm run format:check
+
+# Fix all issues
+npm run fix
+```
 
 ## Project Structure
 
 ```
 .
-├── tests/                    # Playwright test files
-├── playwright.config.ts      # Playwright configuration
-├── tsconfig.json             # TypeScript configuration
-├── eslint.config.mjs         # ESLint configuration (flat config)
-├── prettier.config.mjs       # Prettier configuration
-├── .prettierignore           # Prettier ignore patterns
-└── package.json              # Project dependencies and scripts
+├── .github/workflows/     # CI/CD workflows
+├── .claude/              # Claude Code configuration
+├── eslint.config.mjs     # ESLint configuration (v9+ flat config)
+├── prettier.config.mjs   # Prettier configuration
+├── tsconfig.json         # TypeScript configuration
+├── playwright.config.ts  # Playwright configuration
+├── tests/                # Test files
+└── package.json          # Project metadata
 ```
 
-## Configuration Details
+## Configuration
 
-### ESLint (Modern Flat Config)
+### ESLint
+- Flat config format (v9+)
+- TypeScript strict rules
+- Playwright best practices
+- Stylistic rules (4-space indent, single quotes, semicolons)
 
-- **Format**: ESLint flat config (`eslint.config.mjs`) - modern standard
-- **TypeScript Support**: Full type-aware linting with `typescript-eslint`
-- **Playwright Plugin**: Catches Playwright-specific issues
-- **Stylistic Plugin**: Code style enforcement
-- **Key Rules**:
-    - Floating promise detection (critical for async tests)
-    - Thenable/await validation
-    - No unused variables (ignoring `_` parameters)
-    - Playwright-specific rules (no useless assertions)
-    - Stylistic rules (semicolons, quotes, spacing)
+### Prettier
+- 4-space indent
+- Single quotes
+- Trailing commas
+- Print width: 120
 
-### Prettier (Modern Format)
-
-- **Format**: JavaScript config (`prettier.config.mjs`) - modern standard
-- **2 space indentation**
-- **Single quotes**
-- **100 character line width**
-- **Trailing commas** (ES5 compatible)
-- **Arrow parentheses** (always)
+### TypeScript
+- Strict mode enabled
+- Target: ES2020
+- Module: esnext (ESM)
 
 ### Playwright
+- Chrome browser
+- Parallel test execution
+- HTML reporting
+- Screenshot on failure
+- Trace on retry
 
-- **Multi-browser**: Chrome, Firefox, Safari
-- **Reporting**: HTML test report
-- **Failure Handling**: Screenshots on failure, traces on retry
-- **Type Safety**: Full TypeScript support
+## CI/CD
 
-## Usage
+Tests run automatically on:
+- Push to `main` branch
+- All pull requests
 
-Create test files in the `tests/` directory with `.spec.ts` extension.
+View results in GitHub Actions. Test reports stored as artifacts.
 
-Example:
+## Best Practices
 
-```typescript
-import { test, expect } from '@playwright/test';
+- Write tests in `tests/` directory
+- Use `.test.ts` or `.spec.ts` extensions
+- Follow Page Object Model for complex tests
+- Use Playwright's built-in waiting mechanisms
+- No hard-coded timeouts
 
-test('example test', async ({ page }) => {
-    await page.goto('http://example.com');
-    await expect(page).toHaveTitle(/Example/);
-});
-```
+## License
+
+ISC

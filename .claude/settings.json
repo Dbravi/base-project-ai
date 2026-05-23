@@ -1,10 +1,6 @@
 {
     "permissions": {
-        "allow": [
-            "Read",
-            "Glob",
-            "WebFetch"
-        ]
+        "allow": ["Read", "Glob", "WebFetch"]
     },
     "hooks": {
         "PostToolUse": [

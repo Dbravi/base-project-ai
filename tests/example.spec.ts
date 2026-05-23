@@ -12,4 +12,10 @@ test.describe('Example Tests', () => {
         const element = page.locator('text=Example Domain');
         await expect(element).toBeVisible();
     });
+
+    test('should have main header', async ({ page }) => {
+        await page.goto('http://example.com');
+        const header = page.locator('h1');
+        await expect(header).toBeVisible();
+    });
 });

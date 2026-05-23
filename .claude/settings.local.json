@@ -29,7 +29,9 @@
       "PowerShell(Copy-Item \"$env:USERPROFILE\\\\.claude\\\\settings.json\" \"$env:USERPROFILE\\\\.claude\\\\settings.json.bak\"; Write-Output \"Backed up settings.json\")",
       "PowerShell(npm uninstall -g @juliusbrussee/caveman-code 2>&1)",
       "PowerShell(irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex 2>&1)",
-      "PowerShell($scriptPath = \"$env:TEMP\\\\caveman-install.ps1\"; Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1\" -OutFile $scriptPath; & $scriptPath 2>&1)"
+      "PowerShell($scriptPath = \"$env:TEMP\\\\caveman-install.ps1\"; Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1\" -OutFile $scriptPath; & $scriptPath 2>&1)",
+      "Bash(npm test *)",
+      "Bash(npx playwright *)"
     ]
   }
 }

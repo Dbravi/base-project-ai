@@ -31,7 +31,11 @@
       "PowerShell(irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex 2>&1)",
       "PowerShell($scriptPath = \"$env:TEMP\\\\caveman-install.ps1\"; Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1\" -OutFile $scriptPath; & $scriptPath 2>&1)",
       "Bash(npm test *)",
-      "Bash(npx playwright *)"
+      "Bash(npx playwright *)",
+      "Bash(mkdir -p \"G:/Documents/Programming Projects/Playwright/ai automation setup/.claude/skills\")",
+      "Bash(mv ~/.claude/skills/playwright-best-practices-skill \"G:/Documents/Programming Projects/Playwright/ai automation setup/.claude/skills/\")",
+      "Bash(rm -rf .claude/skills/playwright-best-practices-skill/.git)",
+      "Bash(git rm *)"
     ]
   }
 }

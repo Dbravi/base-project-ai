@@ -42,7 +42,7 @@ test.describe('Example Tests - Negative Cases', () => {
     test('should not find element with wrong text', async ({ page }) => {
         await page.goto('http://example.com');
         const element = page.locator('text=Wrong Text');
-        await expect(element).not.toBeVisible();
+        await expect(element).toBeHidden();
     });
 
     test('should handle invalid url gracefully', async ({ page }) => {

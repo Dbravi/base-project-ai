@@ -21,7 +21,7 @@ test.describe('Example Tests', () => {
 
     test('should have paragraph', async ({ page }) => {
         await page.goto('http://example.com');
-        const para = page.locator('p');
+        const para = page.locator('p').first();
         await expect(para).toBeVisible();
     });
 

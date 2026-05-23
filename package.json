@@ -11,6 +11,7 @@
         "lint:fix": "eslint . --ext .ts --fix",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
+        "fix": "npm run lint:fix && npm run format",
         "type-check": "tsc --noEmit"
     },
     "keywords": [],

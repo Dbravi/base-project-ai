@@ -40,7 +40,8 @@
       "Bash(npx husky *)",
       "Bash(npx commitlint *)",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(gh workflow *)"
     ]
   }
 }

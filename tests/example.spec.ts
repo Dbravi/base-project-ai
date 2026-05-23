@@ -36,7 +36,7 @@ test.describe('Example Tests - Negative Cases', () => {
     test('should not find nonexistent element', async ({ page }) => {
         await page.goto('http://example.com');
         const missing = page.locator('#nonexistent');
-        await expect(missing).not.toBeVisible();
+        await expect(missing).toBeHidden();
     });
 
     test('should not find element with wrong text', async ({ page }) => {

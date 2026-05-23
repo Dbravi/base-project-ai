@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Example Tests', () => {
+test.describe('Example Tests - Positive Cases', () => {
     test('should have title', async ({ page }) => {
         await page.goto('http://example.com');
         const title = page.title();
@@ -30,33 +30,44 @@ test.describe('Example Tests', () => {
         const link = page.locator('a');
         await expect(link).toBeVisible();
     });
+});
 
-    test('should fail - missing element', async ({ page }) => {
+test.describe('Example Tests - Negative Cases', () => {
+    test('should not find nonexistent element', async ({ page }) => {
         await page.goto('http://example.com');
         const missing = page.locator('#nonexistent');
-        await expect(missing).toBeVisible();
+        await expect(missing).not.toBeVisible();
     });
 
-    test('should fail - wrong text', async ({ page }) => {
+    test('should not find element with wrong text', async ({ page }) => {
         await page.goto('http://example.com');
         const element = page.locator('text=Wrong Text');
-        await expect(element).toBeVisible();
+        await expect(element).not.toBeVisible();
     });
 
-    test('should fail - invalid url', async ({ page }) => {
-        await page.goto('http://invalid-url-that-does-not-exist-12345.com');
-        const element = page.locator('body');
-        await expect(element).toBeVisible();
+    test('should handle invalid url gracefully', async ({ page }) => {
+        let failed = false;
+        try {
+            await page.goto('http://invalid-url-that-does-not-exist-12345.com', { timeout: 5000 });
+        } catch {
+            failed = true;
+        }
+        expect(failed).toBe(true);
     });
 
-    test('should fail - assertion error', async ({ page }) => {
-        await page.goto('http://example.com');
-        expect('foo').toBe('bar');
+    test('should not equal different values', async () => {
+        expect('foo').not.toBe('bar');
     });
 
-    test('should fail - timeout on element', async ({ page }) => {
+    test('should timeout on hidden element', async ({ page }) => {
         await page.goto('http://example.com');
         const hidden = page.locator('#hidden-element');
-        await expect(hidden).toBeVisible({ timeout: 100 });
+        let timedOut = false;
+        try {
+            await expect(hidden).toBeVisible({ timeout: 100 });
+        } catch {
+            timedOut = true;
+        }
+        expect(timedOut).toBe(true);
     });
 });

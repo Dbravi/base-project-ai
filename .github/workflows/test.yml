@@ -16,7 +16,7 @@ jobs:
                   node-version: 22
                   cache: npm
             - run: npm ci
-            - run: npx playwright install chromium
+            - run: npx playwright install chromium-headless-shell
             - run: npm run type-check
             - run: npm run lint
             - run: npm test

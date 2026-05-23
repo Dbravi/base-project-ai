@@ -5,6 +5,7 @@ Playwright test suite for E2E testing with TypeScript, ESLint, and Prettier.
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 20+
 - npm
 
@@ -66,23 +67,27 @@ npm run fix
 ## Configuration
 
 ### ESLint
+
 - Flat config format (v9+)
 - TypeScript strict rules
 - Playwright best practices
 - Stylistic rules (4-space indent, single quotes, semicolons)
 
 ### Prettier
+
 - 4-space indent
 - Single quotes
 - Trailing commas
 - Print width: 120
 
 ### TypeScript
+
 - Strict mode enabled
 - Target: ES2020
 - Module: esnext (ESM)
 
 ### Playwright
+
 - Chrome browser
 - Parallel test execution
 - HTML reporting
@@ -92,6 +97,7 @@ npm run fix
 ## CI/CD
 
 Tests run automatically on:
+
 - Push to `main` branch
 - All pull requests
 

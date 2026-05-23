@@ -19,7 +19,7 @@
     "license": "ISC",
     "type": "module",
     "lint-staged": {
-        "*.ts": ["eslint --fix", "prettier --write"]
+        "*.ts": ["eslint"]
     },
     "devDependencies": {
         "@commitlint/cli": "^21.0.1",

@@ -10,7 +10,26 @@
       "Bash(node -e \"import\\('eslint-plugin-playwright'\\).then\\(p => console.log\\(JSON.stringify\\(p.default.configs, null, 2\\)\\)\\)\")",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(echo '{\"tool_name\":\"Edit\",\"tool_input\":{\"file_path\":\"G:\\\\\\\\Documents\\\\\\\\Programming Projects\\\\\\\\Playwright\\\\\\\\ai automation setup\\\\\\\\tests\\\\\\\\example.spec.ts\"}}')",
+      "Bash(grep -E '\\\\.ts$')",
+      "Bash(claude plugin *)",
+      "Bash(gh api *)",
+      "Bash(gh search *)",
+      "Bash(gh repo *)",
+      "WebFetch(domain:registry.npmjs.org)",
+      "Bash(ls \"C:/Users/dbrav/.claude/skills/\" | sort > /tmp/folder_skills.txt && cat /tmp/folder_skills.txt | wc -l)",
+      "Bash(chmod +x \"G:/Documents/Programming Projects/Playwright/ai automation setup/.git/hooks/pre-commit\")",
+      "mcp__622657eb-f025-4f4b-96c4-1e726ed900ad__notion-search",
+      "mcp__622657eb-f025-4f4b-96c4-1e726ed900ad__notion-fetch",
+      "mcp__622657eb-f025-4f4b-96c4-1e726ed900ad__notion-update-page",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -I {} basename {})",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "PowerShell(Copy-Item \"$env:USERPROFILE\\\\.claude\\\\settings.json\" \"$env:USERPROFILE\\\\.claude\\\\settings.json.bak\"; Write-Output \"Backed up settings.json\")",
+      "PowerShell(npm uninstall -g @juliusbrussee/caveman-code 2>&1)",
+      "PowerShell(irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex 2>&1)",
+      "PowerShell($scriptPath = \"$env:TEMP\\\\caveman-install.ps1\"; Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1\" -OutFile $scriptPath; & $scriptPath 2>&1)"
     ]
   }
 }

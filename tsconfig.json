@@ -13,7 +13,8 @@
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
-        "moduleResolution": "node"
+        "moduleResolution": "bundler",
+        "types": ["node"]
     },
     "include": ["tests/**/*.ts", "playwright.config.ts"],
     "exclude": ["node_modules", "dist"]

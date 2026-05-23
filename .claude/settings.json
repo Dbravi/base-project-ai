@@ -1,4 +1,11 @@
 {
+    "permissions": {
+        "allow": [
+            "Read",
+            "Glob",
+            "WebFetch"
+        ]
+    },
     "hooks": {
         "PostToolUse": [
             {
@@ -6,8 +13,8 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | grep -E '\\.ts$' && cd \"G:/Documents/Programming Projects/Playwright/ai automation setup\" && npm run fix 2>/dev/null || true",
-                        "statusMessage": "Running ESLint + Prettier..."
+                        "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | grep -E '\\\\.ts$' && cd \"G:/Documents/Programming Projects/Playwright/ai automation setup\" && npm run format 2>/dev/null || true",
+                        "statusMessage": "Running Prettier..."
                     }
                 ]
             }

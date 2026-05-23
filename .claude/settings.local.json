@@ -38,7 +38,9 @@
       "Bash(git rm *)",
       "Bash(python3 -c \"import yaml, sys; yaml.safe_load\\(sys.stdin\\); print\\('✓ Valid YAML'\\)\")",
       "Bash(npx husky *)",
-      "Bash(npx commitlint *)"
+      "Bash(npx commitlint *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }

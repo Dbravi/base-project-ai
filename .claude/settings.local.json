@@ -35,7 +35,10 @@
       "Bash(mkdir -p \"G:/Documents/Programming Projects/Playwright/ai automation setup/.claude/skills\")",
       "Bash(mv ~/.claude/skills/playwright-best-practices-skill \"G:/Documents/Programming Projects/Playwright/ai automation setup/.claude/skills/\")",
       "Bash(rm -rf .claude/skills/playwright-best-practices-skill/.git)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(python3 -c \"import yaml, sys; yaml.safe_load\\(sys.stdin\\); print\\('✓ Valid YAML'\\)\")",
+      "Bash(npx husky *)",
+      "Bash(npx commitlint *)"
     ]
   }
 }

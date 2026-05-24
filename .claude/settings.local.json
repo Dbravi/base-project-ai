@@ -41,7 +41,10 @@
       "Bash(npx commitlint *)",
       "Bash(git remote *)",
       "Bash(git push *)",
-      "Bash(gh workflow *)"
+      "Bash(gh workflow *)",
+      "mcp__claude_ai_Context7__resolve-library-id",
+      "mcp__claude_ai_Context7__query-docs",
+      "Bash(git revert *)"
     ]
   }
 }
